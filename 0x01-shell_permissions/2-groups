@@ -1,4 +1,2 @@
 #!/bin/bash
-whoami
-groups 2>/dev/null | tr -s ' ' ' '
-echo
+groups
