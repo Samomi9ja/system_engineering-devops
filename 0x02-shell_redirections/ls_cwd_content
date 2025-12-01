@@ -1,0 +1,17 @@
+total 20
+drwxr-xr-x 1 OmiladeSamuel 197121  0 Nov 30 23:07 .
+drwxr-xr-x 1 OmiladeSamuel 197121  0 Nov 30 21:41 ..
+-rwxr-xr-x 1 OmiladeSamuel 197121 32 Nov 30 22:00 0-hello_world
+-rwxr-xr-x 1 OmiladeSamuel 197121 28 Nov 30 22:08 1-confused_smiley
+-rwxr-xr-x 1 OmiladeSamuel 197121 28 Nov 30 22:16 2-hellofile
+-rwxr-xr-x 1 OmiladeSamuel 197121 39 Nov 30 22:25 3-twofiles
+-rwxr-xr-x 1 OmiladeSamuel 197121 35 Nov 30 22:30 4-lastlines
+-rwxr-xr-x 1 OmiladeSamuel 197121 35 Nov 30 22:32 5-firstlines
+-rwxr-xr-x 1 OmiladeSamuel 197121 40 Nov 30 22:36 6-third_line
+-rwxr-xr-x 1 OmiladeSamuel 197121 80 Nov 30 23:03 7-file
+-rwxr-xr-x 1 OmiladeSamuel 197121 36 Nov 30 23:06 8-cwd_state
+drwxr-xr-x 1 OmiladeSamuel 197121  0 Nov 30 21:42 d
+-rwxr-xr-x 1 OmiladeSamuel 197121 28 Nov 30 22:22 Enter
+-rw-r--r-- 1 OmiladeSamuel 197121 42 Nov 30 22:36 iacta
+-rw-r--r-- 1 OmiladeSamuel 197121  0 Nov 30 23:07 ls_cwd_content
+-rw-r--r-- 1 OmiladeSamuel 197121 32 Nov 30 21:55 README.md
