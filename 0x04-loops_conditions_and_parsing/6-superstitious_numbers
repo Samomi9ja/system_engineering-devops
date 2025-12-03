@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Loops from 1 to 20, displaying specific "bad luck" messages for 4, 9, and 17.
+
+i=1  # Initialize counter variable 'i' to 1
+
+while [ $i -le 20 ]  # Loop as long as 'i' is less than or equal to 20
+do
+    # Always display the current number
+    echo "$i"
+
+    # Use a case statement to check for superstitious numbers
+    case $i in
+        4)
+            echo "bad luck from China"
+            ;;
+        9)
+            echo "bad luck from Japan"
+            ;;
+        17)
+            echo "bad luck from Italy"
+            ;;
+        # The catch-all pattern '*' is not needed here since we only perform actions 
+        # for specific numbers, and the default action (displaying the number) 
+        # is handled before the case statement.
+    esac
+
+    # Increment the counter
+    i=$((i + 1))
+done
