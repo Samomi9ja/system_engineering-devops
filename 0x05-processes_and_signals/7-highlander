@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Displays "To infinity and beyond" indefinitely and handles SIGTERM inline.
 
-# Trap SIGTERM (Signal 15): When received, print the message and continue the script.
-# (If you need the temporary "OK" checker fix, replace "I am invincible!!!" with "OK")
+# Trap SIGTERM (Signal 15): When received, print the message and continue.
 trap 'printf "I am invincible!!!\n"' 15
 
 while true
