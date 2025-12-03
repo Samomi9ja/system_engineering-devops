@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Finds and terminates the 4-to_infinity_and_beyond script process using pkill (alternative to kill).
+
+# Use pkill -f to find the full command line of the running script and send SIGTERM.
+pkill -f 4-to_infinity_and_beyond
