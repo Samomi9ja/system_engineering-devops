@@ -13,6 +13,10 @@ if [ -n "$PIDS_FOUND" ]; then
     echo "$PIDS_FOUND" | xargs kill -9
     echo "Sent SIGKILL (9) to PIDs: $PIDS_FOUND"
 else
+<<<<<<< HEAD
     # Corrected line: Closing double quote added here
     echo "Error: 7-highlander process not found. Ensure it is running."
 fi
+=======
+    echo "Error: 7-highlander process not found. Ensure it is running."
+>>>>>>> 724bfa3b12f1c9db7e7f8836ef655e510f3cf9a3
