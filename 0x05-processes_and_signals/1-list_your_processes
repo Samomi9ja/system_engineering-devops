@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Displays all processes belonging to the current user.
+ps ux
