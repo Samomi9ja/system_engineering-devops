@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Displays "To infinity and beyond" indefinitely and catches SIGTERM to print "I am invincible!!!".
+
+# Trap SIGTERM (Signal 15): When SIGTERM is received, print the message and continue the script.
+trap 'echo "I am invincible!!!"' SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
