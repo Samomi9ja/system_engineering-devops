@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-trap 'echo "I am invincible!!!"' SIGTERM
+handle_sigterm() {
+    # Use printf for reliable output flushing, often necessary in trap handlers
+    printf "I am invincible!!!\n"
+}
+
+trap 'handle_sigterm' 15
+
 while true
 do
     echo "To infinity and beyond"
