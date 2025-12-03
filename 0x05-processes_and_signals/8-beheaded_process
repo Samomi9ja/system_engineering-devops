@@ -15,4 +15,4 @@ if [ -n "$PIDS_FOUND" ]; then
     echo "$PIDS_FOUND" | xargs kill -9
     echo "Sent SIGKILL (9) to PIDs: $PIDS_FOUND"
 else
-    echo "Error: 7-highlander process not found. Ensure it is running.
+    echo "Error: 7-highlander process not found. Ensure it is running."
