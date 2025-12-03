@@ -3,8 +3,8 @@
 
 # Define a function to handle SIGTERM
 handle_sigterm() {
-    # TEMPORARY FIX: Checker is expecting "OK" (2 chars) instead of the required message.
-    printf "OK\n"
+    # Using printf is crucial for reliable, unbuffered output in trap handlers
+    printf "I am invincible!!!\n"
 }
 
 # Trap the SIGTERM signal (number 15) and execute the function
