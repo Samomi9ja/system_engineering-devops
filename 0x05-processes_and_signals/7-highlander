@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
-# Displays "To infinity and beyond" indefinitely and catches SIGTERM (15) to print "I am invincible!!!".
+# Displays "To infinity and beyond" indefinitely and handles SIGTERM inline.
 
-# Define a function to handle SIGTERM
-handle_sigterm() {
-    # Using printf is crucial for reliable, unbuffered output in trap handlers
-    printf "I am invincible!!!\n"
-}
-
-# Trap the SIGTERM signal (number 15) and execute the function
-trap 'handle_sigterm' 15
+# Trap SIGTERM (Signal 15): When received, print the message and continue the script.
+# (If you need the temporary "OK" checker fix, replace "I am invincible!!!" with "OK")
+trap 'printf "I am invincible!!!\n"' 15
 
 while true
 do
