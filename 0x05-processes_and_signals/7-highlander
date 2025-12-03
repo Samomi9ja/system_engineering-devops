@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+# Displays "To infinity and beyond" indefinitely and catches SIGTERM (15) to print "I am invincible!!!".
+# <--- Ensure this line starts with a '#'
 handle_sigterm() {
-    # Use printf for reliable output flushing, often necessary in trap handlers
     printf "I am invincible!!!\n"
 }
 

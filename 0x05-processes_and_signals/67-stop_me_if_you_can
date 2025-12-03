@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
+# Finds and sends SIGTERM to the 7-highlander script process.
+# <--- Ensure this line starts with a '#'
+
 pkill -f 7-highlander
