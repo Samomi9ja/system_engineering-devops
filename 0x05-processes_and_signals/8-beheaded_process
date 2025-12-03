@@ -2,21 +2,14 @@
 # Forcibly terminates the 7-highlander process using SIGKILL (Signal 9).
 # shellcheck disable=SC2009
 
-# Command substitution finds the PIDs and passes them directly as separate arguments to kill -9.
-# The 'kill -9' command will execute for every PID found by the pipe.
-# We explicitly suppress errors if no PID is found.
-
-# Find PIDs of processes containing '7-highlander' and exclude the 'grep' process itself.
+# 1. Find all PIDs associated with the 7-highlander script.
+# 2. Use xargs to execute 'kill -9' on every single PID found, one at a time.
 PIDS_FOUND=$(ps aux | grep -v grep | grep "7-highlander" | awk '{print $2}')
+
 if [ -n "$PIDS_FOUND" ]; then
-    # Use the 'xargs' utility to execute 'kill -9' for each PID found.
+    # Pass the list of PIDs to xargs, ensuring kill is executed for each one.
     echo "$PIDS_FOUND" | xargs kill -9
-    echo "Sent SIGKILL (9) to PIDs: $PIDS_FOUND"
 else
-<<<<<<< HEAD
-    # Corrected line: Closing double quote added here
-    echo "Error: 7-highlander process not found. Ensure it is running."
+    # This path is generally not taken if the Python script started 7-highlander
+    echo "Error: 7-highlander process not found."
 fi
-=======
-    echo "Error: 7-highlander process not found. Ensure it is running."
->>>>>>> 724bfa3b12f1c9db7e7f8836ef655e510f3cf9a3
