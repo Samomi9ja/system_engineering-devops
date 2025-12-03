@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Displays all processes belonging to the current user.
-ps ux
+# Displays a list of all running processes in user-oriented, forest (hierarchy) format.
+
+ps auxf
