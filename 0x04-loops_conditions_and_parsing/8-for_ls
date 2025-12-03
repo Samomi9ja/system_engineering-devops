@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Displays all non-hidden files, showing only the part of the name after the first dash.
+
+# Loop through all files and directories in the current folder, excluding hidden ones (since we use *)
+for file in *
+do
+    # Use parameter expansion to remove the shortest prefix matching '*-'.
+    # This removes everything up to and including the first hyphen.
+    echo "${file#*-}"
+done
