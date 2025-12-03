@@ -8,11 +8,11 @@
 
 # Find PIDs of processes containing '7-highlander' and exclude the 'grep' process itself.
 PIDS_FOUND=$(ps aux | grep -v grep | grep "7-highlander" | awk '{print $2}')
-
 if [ -n "$PIDS_FOUND" ]; then
-    # Use the 'xargs' utility to take the space-separated list of PIDs and execute 'kill -9' 
-    # for each one, resolving the issue where 'kill' sees multiple PIDs as one argument.
+    # Use the 'xargs' utility to execute 'kill -9' for each PID found.
     echo "$PIDS_FOUND" | xargs kill -9
     echo "Sent SIGKILL (9) to PIDs: $PIDS_FOUND"
 else
-    echo "Error: 7-highlander process not found. Ensure it is running.
+    # Corrected line: Closing double quote added here
+    echo "Error: 7-highlander process not found. Ensure it is running."
+fi
