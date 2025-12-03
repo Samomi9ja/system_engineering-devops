@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Forcibly terminates the 7-highlander process using SIGKILL (Signal 9).
+# shellcheck disable=SC2009
+
+# 1. Use ps aux to list all processes.
+# 2. Grep for the script name and exclude the grep command itself.
+# 3. Use awk to extract the PID (field 2).
+PID_TO_KILL=$(ps aux | grep -v grep | grep "7-highlander" | awk '{print $2}')
+
+if [ -n "$PID_TO_KILL" ]; then
+    # Send SIGKILL (Signal 9) to the process
+    kill -9 "$PID_TO_KILL"
+    echo "Sent SIGKILL (9) to PID $PID_TO_KILL"
+else
+    echo "Error: 7-highlander process not found. Ensure it is running."
+fi
