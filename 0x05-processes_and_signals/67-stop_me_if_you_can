@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Finds and sends SIGTERM to the 7-highlander script process.
+
+# Use pkill -f to find the full command line of the running script and send SIGTERM (default signal).
+pkill -f 7-highlander
